@@ -6,32 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Megrovás</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </head>
 <body>
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-6">
             <h1>Tantárgyak</h1>
-            <select>
-            <option value="0">☆*: .｡. o(≧▽≦)o .｡.:*☆</option>
-            <option value="1">Matek</option>
-            <option value="2">Angol</option>
-            <option value="3">Történelem</option>
-            <option value="4">Tesi</option>
-            <option value="5">Magyar💀</option>
+            <select id="tantargy">
+            <option value="Valaszt">☆*: .｡. o(≧▽≦)o .｡.:*☆</option>
+            <option value="Matek">Matek</option>
+            <option value="Angol">Angol</option>
+            <option value="Történelem">Történelem</option>
+            <option value="Tesi">Tesi</option>
+            <option value="Magyar💀">Magyar💀</option>
         </select>
         <h1>Diák neve</h1>
         <h2><input type="text" id="diakneve"></h2>
-        <input type="checkbox" name="" id="kere">Megrovást kérek
+
+        <label class="checkbox-btn">
+            <label for="checkbox"></label>
+            <input type="checkbox" name="" id="kere">Megrovást kérek
+            <span class="checkmark"></span>
+        </label>
+
         <br>
         <br>
-        <button onclick="Feldolgoz()" id="kuldes">Küldés</button>
+            <span> <button onclick="Feldolgoz()" id="kuldes">Küldés</button>
+            </span>
         </div>
         <div class="col-md-6">
             <h1>Elvett telefonok</h1>
-            <select size="10" id="elvett"></select>
+            <select size="10" id="elvett">
+            </select>
+            <br>
+            <button onclick="Torol()" id="feldolgoz">Feldolgoz</button>
         </div>
     </div> 
 </div>
 </body>
 </html>
+
+<script src="assets/js/js.js"></script>
